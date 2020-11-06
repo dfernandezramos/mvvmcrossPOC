@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MvvmCross.Forms" Version="7.1.2" />
+        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj" />
+    </ItemGroup>
+</Project>
