@@ -19,6 +19,8 @@
             <Label Text="Tip to leave" />
             <Label x:Name="TipLabel" 
                    mvx:Bi.nd="Text Tip"/>
+            <Button Text="Second view"
+                    x:Name="NavigationButton"/>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

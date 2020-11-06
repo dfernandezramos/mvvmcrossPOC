@@ -1,17 +1,23 @@
 using System;
 using System.Threading.Tasks;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using TipCalc.Core.Services;
 
 namespace TipCalc.Core.ViewModels
 {
-    public class TipViewModel: MvxViewModel
+    public class TipViewModel : MvxViewModel
     {
         readonly ICalculationService _calculationService;
+        private readonly IMvxNavigationService _mvxNavigationService;
 
-        public TipViewModel(ICalculationService calculationService)
+        public TipViewModel(ICalculationService calculationService, IMvxNavigationService navigationService)
         {
             _calculationService = calculationService;
+            _mvxNavigationService = navigationService;
+            
+            NavigateCommand = new MvxAsyncCommand(() => _mvxNavigationService.Navigate<SecondViewModel>());
         }
 
         public override async Task Initialize()
@@ -23,6 +29,8 @@ namespace TipCalc.Core.ViewModels
 
             Recalculate();
         }
+        
+        public IMvxAsyncCommand NavigateCommand { get; }
 
         private double _subTotal;
         public double SubTotal

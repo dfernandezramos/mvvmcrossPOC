@@ -4,13 +4,13 @@ using TipCalc.Core.ViewModels;
 namespace TipCalc.Forms.UI.Pages
 {
     // [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TipView :  MvxContentPage<TipViewModel>
+    public partial class SecondView :  MvxContentPage<SecondViewModel>
     {
-        public TipView()
+        public SecondView()
         {
             InitializeComponent();
         }
-
+        
         protected override void OnViewModelSet()
         {
             base.OnViewModelSet();
