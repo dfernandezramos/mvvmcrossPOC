@@ -21,6 +21,8 @@
                    mvx:Bi.nd="Text Tip"/>
             <Button Text="Second view"
                     x:Name="NavigationButton"/>
+            <Button Text="Navigate with params"
+                    x:Name="NavigationParamsButton"/>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

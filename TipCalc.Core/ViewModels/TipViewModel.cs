@@ -18,6 +18,8 @@ namespace TipCalc.Core.ViewModels
             _mvxNavigationService = navigationService;
             
             NavigateCommand = new MvxAsyncCommand(() => _mvxNavigationService.Navigate<SecondViewModel>());
+            NavigateWithParametersCommand = new MvxAsyncCommand(
+                () => _mvxNavigationService.Navigate<ParametrizedViewModel, string>("This text comes from a navigation parameter!"));
         }
 
         public override async Task Initialize()
@@ -31,6 +33,8 @@ namespace TipCalc.Core.ViewModels
         }
         
         public IMvxAsyncCommand NavigateCommand { get; }
+        
+        public IMvxAsyncCommand NavigateWithParametersCommand { get; }
 
         private double _subTotal;
         public double SubTotal

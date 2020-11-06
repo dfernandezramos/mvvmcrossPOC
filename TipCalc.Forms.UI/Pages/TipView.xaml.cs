@@ -1,5 +1,6 @@
 using MvvmCross.Forms.Views;
 using TipCalc.Core.ViewModels;
+using Xamarin.Forms;
 
 namespace TipCalc.Forms.UI.Pages
 {
@@ -15,6 +16,7 @@ namespace TipCalc.Forms.UI.Pages
         {
             base.OnViewModelSet();
             NavigationButton.Command = ViewModel.NavigateCommand;
+            NavigationParamsButton.Command = ViewModel.NavigateWithParametersCommand;
         }
     }
 }
