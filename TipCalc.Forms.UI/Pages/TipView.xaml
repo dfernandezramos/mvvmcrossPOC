@@ -7,6 +7,7 @@
                       xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
                       xmlns:viewModels="clr-namespace:TipCalc.Core.ViewModels;assembly=TipCalc.Core"
                       x:Class="TipCalc.Forms.UI.Pages.TipView">
+    <NavigationPage.HasNavigationBar>False</NavigationPage.HasNavigationBar>
     <ContentPage.Content>
         <StackLayout Margin="10">
             <Label Text="Subtotal" />
